@@ -10,6 +10,7 @@ class Solution:
             num = mid * mid
             
             if num == x:
+                
                 return mid  
             elif num < x:
                 left = mid + 1 
@@ -17,3 +18,4 @@ class Solution:
                 right = mid - 1  
         
         return right 
+
