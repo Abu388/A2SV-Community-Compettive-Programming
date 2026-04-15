@@ -1,7 +1,6 @@
 class Solution:
     def closestTarget(self, words: List[str], target: str, startIndex: int) -> int:
         n = len(words)
-        c = 0
         if target not in words:
             return -1
         r = startIndex 
