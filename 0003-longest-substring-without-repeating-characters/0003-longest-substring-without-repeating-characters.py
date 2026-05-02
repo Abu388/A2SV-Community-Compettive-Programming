@@ -1,19 +1,15 @@
+from collections import deque
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if s == "":
-            return 0
-        l=0
-        
-        res=[]
-        count=float("-inf")
-        while l< len(s):
-            
-            if s[l] not in res:
-                res.append(s[l])
-                count=max(count,len(res))
-                l+=1
+        stk = deque([])
+        res = 0
+        for w in s:
+            if not stk:
+                stk.append(w)
             else:
-                res.pop(0)
-        return count
-            
-        
+                while w in stk:
+                    
+                    stk.popleft()
+                stk.append(w)
+            res = max(res, len(stk))
+        return res
