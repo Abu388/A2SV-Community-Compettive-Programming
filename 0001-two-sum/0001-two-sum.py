@@ -1,15 +1,14 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-
-        arr=[]
-        for l in range(len(nums)-1):
-            for r in range(l+1,len(nums)):
-                if nums[l]+nums[r] != target:
-                    r += 1
-                else:
-                    arr.append(l)
-                    arr.append(r)
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        for i in range(len(nums) - 1):
             
-        return arr
-        
-        
+            for j in range(i + 1 ,len(nums)):
+                if nums[i]+nums[j] == target:
+                    
+                    return [i , j]
