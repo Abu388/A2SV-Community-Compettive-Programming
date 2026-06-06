@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(nums) - 1):
             left.append(left[i] + nums[i ])
         j = 0
-        print(left)
+        
         for i in range(len(nums) - 1, 0 , -1):
             r.append( nums[i] + r[j])
             j += 1
