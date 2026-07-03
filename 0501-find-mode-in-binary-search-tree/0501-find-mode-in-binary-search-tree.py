@@ -15,7 +15,6 @@ class Solution:
         dfs(root)
         v = list(mp.values())
         v = max(v)
-        print(v)
         res = []
         for k in mp:
             if mp[k] == v:
